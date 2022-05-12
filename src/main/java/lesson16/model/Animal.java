@@ -57,7 +57,7 @@ public class Animal {
     }
 
     public void increaseMoney(int min, int max) {
-        money += min + Math.random() * (max - min + 1);
+        money += (min + Math.random() * (max - min + 1));
     }
 
     public void addMoney(double value) {
@@ -91,7 +91,7 @@ public class Animal {
         if (happy < 10) {
             multiplier *= 1.2;
         }
-        return (ill && (value < 0) ? 2 : 1) * value;
+        return value * multiplier;
     }
 
     public void toSeek() {
